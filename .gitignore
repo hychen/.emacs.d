@@ -1,0 +1,26 @@
+# directory
+auto-save-list/
+el-get/
+eshell/history
+eshell/lastdir
+info/
+thumbs/
+url/
+# files
+*~
+*.elc
+bookmarks
+custom.el
+places.el
+tramp
+ac-comphist.dat
+.smex-items
+places
+elpa
+
+# CEDET
+ede-projects.el
+srecode-map.el
+semanticdb/
+
+
