@@ -17,6 +17,8 @@
 ;; Highlight matching parentheses when the point is on them.
 (show-paren-mode t)
 
+(setq linum-format "%2d")
+
 ;; Custom faces
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
