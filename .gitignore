@@ -10,7 +10,6 @@ url/
 *~
 *.elc
 bookmarks
-custom.el
 places.el
 tramp
 ac-comphist.dat

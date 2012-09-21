@@ -21,6 +21,9 @@
 (setq user-full-name "Chen Hsin-Yi")
 (setq user-mail-address "ossug.hychen@gmail.com")
 
+;; Set init file for custom settings
+(setq custom-file (locate-user-emacs-file "custom.el"))
+
 ;; Load path etc.
 (add-to-list 'load-path (locate-user-emacs-file "rc"))
 
@@ -44,4 +47,5 @@
 (require 'rc-lisp)
 (require 'rc-haskell)
 
+(load custom-file 'noerror)
 ;;; Init.el end
