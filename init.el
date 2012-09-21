@@ -33,6 +33,7 @@
 
 ;; Generic Modes
 (require 'rc-keybinding)
+(require 'rc-auto-insert)
 (require 'rc-misc)
 
 ;; Documenting Modes
