@@ -16,9 +16,14 @@
 
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
-(rc-require 'python-mode)
 
-;; pydoc
+;; Enable Python Mode
+(rc-require 'python-mode)
+;; Check your program for style errors and common mistakes
+(rc-require 'python-pep8)
+(rc-require 'python-pylint)
+
+;; Use pydoc by M-X pydoc
 (defun pydoc (keyword)
   (interactive "sKeyword: ")
   (shell-command (concat "pydoc " keyword))
