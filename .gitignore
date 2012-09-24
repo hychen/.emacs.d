@@ -16,6 +16,7 @@ ac-comphist.dat
 .smex-items
 places
 elpa
+session*
 
 # CEDET
 ede-projects.el
