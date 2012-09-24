@@ -34,6 +34,7 @@
 ;; Generic Modes
 (require 'rc-keybinding)
 (require 'rc-auto-insert)
+(require 'rc-dired)
 (require 'rc-misc)
 
 ;; Documenting Modes
