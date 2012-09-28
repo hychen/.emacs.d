@@ -23,5 +23,5 @@
 (setq linum-format "%2d")
 
 ;; split 2 column window
-(split-window-right)
+;;(split-window-right)
 (provide 'rc-appearance)
