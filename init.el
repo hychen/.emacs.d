@@ -26,6 +26,7 @@
 
 ;; Load path etc.
 (add-to-list 'load-path (locate-user-emacs-file "rc"))
+(add-to-list 'custom-theme-load-path (locate-user-emacs-file "themes"))
 
 ;; Load features that needs to be loaded early in startup
 (require 'rc-appearance)

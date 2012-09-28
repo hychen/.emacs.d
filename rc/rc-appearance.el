@@ -1,3 +1,6 @@
+;; Load default theme
+(load-theme 'tomorrow-night-bright t)
+
 ;; Turn off mouse interfae early in startup to avoid momentary display
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
     (when (fboundp mode) (funcall mode -1)))
