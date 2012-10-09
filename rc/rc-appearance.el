@@ -17,13 +17,17 @@
 ;; Display line number in left
 (global-linum-mode t)
 
+;; Set line number format in left
+(setq linum-format "%2d")
+
 ;; Highlight matching parentheses when the point is on them.
 (show-paren-mode t)
 
-(setq linum-format "%2d")
-
 ;; Highlight current line
 (global-hl-line-mode 1)
+
+;; Display buffer name in window title
+(setq frame-title-format "%b@emacs")
 
 ;; split 2 column window
 ;;(split-window-right)
