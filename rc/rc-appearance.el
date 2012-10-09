@@ -22,6 +22,9 @@
 
 (setq linum-format "%2d")
 
+;; Highlight current line
+(global-hl-line-mode 1)
+
 ;; split 2 column window
 ;;(split-window-right)
 (provide 'rc-appearance)
