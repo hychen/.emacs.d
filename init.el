@@ -36,6 +36,7 @@
 (require 'rc-keybinding)
 (require 'rc-auto-insert)
 (require 'rc-dired)
+(require 'rc-multi-term)
 (require 'rc-misc)
 
 ;; Documenting Modes
@@ -46,9 +47,11 @@
 (require 'rc-git)
 
 ;; Programming Modes
+(require 'rc-cedet)
 (require 'rc-python)
 (require 'rc-lisp)
 (require 'rc-haskell)
+(require 'rc-vala)
 
 (load custom-file 'noerror)
 ;;; Init.el end
