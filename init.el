@@ -44,7 +44,6 @@
 (require 'rc-markdown)
 
 ;; Version Control Modes
-(require 'rc-git)
 
 ;; Programming Modes
 (require 'rc-cedet)
