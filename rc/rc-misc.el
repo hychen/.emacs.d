@@ -1,5 +1,11 @@
 ;;; rc-misc.el -- Misc Settings
 
+;; Window Navigation
+;; Use meta + N to switch between windows instead of
+;; C-x C-j
+(require 'window-number)
+(window-number-meta-mode)
+
 ;; Don't clutter up directories with files~
 (setq backup-directory-alist `(("." . ,(expand-file-name
                                         (locate-user-emacs-file "backups")))))
