@@ -24,7 +24,7 @@
 (show-paren-mode t)
 
 ;; Highlight current line
-(global-hl-line-mode 1)
+;;(global-hl-line-mode 1)
 
 ;; Display buffer name in window title
 (setq frame-title-format "%b@emacs")
