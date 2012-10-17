@@ -81,4 +81,7 @@
 	   (let ((mark-even-if-inactive transient-mark-mode))
 	     (indent-region (region-beginning) (region-end) nil))))))
 
+;; Enable display/open image in Emacs
+(auto-image-file-mode)
+
 (provide 'rc-misc)
