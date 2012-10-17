@@ -41,6 +41,7 @@
 
 ;; Documenting Modes
 (require 'rc-yaml)
+(require 'rc-org)
 (require 'rc-markdown)
 
 ;; Version Control Modes
