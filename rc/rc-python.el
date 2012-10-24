@@ -22,6 +22,7 @@
 ;; Check your program for style errors and common mistakes
 (rc-require 'python-pep8)
 (rc-require 'python-pylint)
+(require 'tramp)
 
 ;; Use pydoc by M-X pydoc
 (defun pydoc (keyword)
