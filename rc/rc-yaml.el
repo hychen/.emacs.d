@@ -19,6 +19,6 @@
 (rc-require 'yaml-mode)
 
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-
+(add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
 (provide 'rc-yaml)
 ;; rc-yaml.el ends here
