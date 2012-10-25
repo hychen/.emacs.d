@@ -6,6 +6,9 @@
 (require 'window-number)
 (window-number-meta-mode)
 
+;; Use text-mode as default
+(setq default-major-mode 'text-mode)
+
 ;; Don't clutter up directories with files~
 (setq backup-directory-alist `(("." . ,(expand-file-name
                                         (locate-user-emacs-file "backups")))))
