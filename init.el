@@ -18,8 +18,9 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;; Personal Infomation
-(setq user-full-name "Chen Hsin-Yi")
+(setq user-full-name "Hsin-Yi Chen (hychen)")
 (setq user-mail-address "ossug.hychen@gmail.com")
+(setq debian-changelog-mailing-address "hychen@canonical.com")
 
 ;; Set init file for custom settings
 (setq custom-file (locate-user-emacs-file "custom.el"))
