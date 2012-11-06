@@ -26,9 +26,13 @@
 ;; Highlight current line
 ;;(global-hl-line-mode 1)
 
+;; Enable syntax highlighting for older Emacsen that have it off
+(global-font-lock-mode t)
+
 ;; Display buffer name in window title
 (setq frame-title-format "%b@emacs")
 
-;; split 2 column window
-;;(split-window-right)
+;; Making Buffer Names Unique
+(setq uniquify-buffer-name-style 'forward)
+
 (provide 'rc-appearance)
