@@ -1,3 +1,9 @@
+;; Tabbar
+(rc-require 'tabbar)
+(tabbar-mode t)
+;; Setup tabbar to look pretty 
+(rc-require 'tabbar-ruler)
+
 ;; Load default theme
 (load-theme 'tomorrow-night-bright t)
 

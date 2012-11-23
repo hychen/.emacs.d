@@ -26,6 +26,10 @@
 ;; Search help documents by using regex
 (global-set-key (kbd "C-h a") 'apropos)
 
+;; navigating among the tabs of one tab group - Tabbar
+(global-set-key (kbd "C-M-j") 'tabbar-backward-tab)
+(global-set-key (kbd "C-M-k") 'tabbar-forward-tab)
+
 ;; Smart copy, if no region active, it simply copy the current whole line
 ;; Orign: http://emacser.com/torture-emacs.htm
 (defadvice kill-line (before check-position activate)
