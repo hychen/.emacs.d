@@ -29,6 +29,11 @@
 ;; Highlight matching parentheses when the point is on them.
 (show-paren-mode t)
 
+;; Sets an idle timer that highlights all occurences in the buffer
+;; of the word under the point.
+(rc-require 'idle-highlight-mode)
+(setq idle-highlight-mode t)
+
 ;; Highlight current line
 ;;(global-hl-line-mode 1)
 
