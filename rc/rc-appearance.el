@@ -35,7 +35,7 @@
 (setq idle-highlight-mode t)
 
 ;; Highlight current line
-;;(global-hl-line-mode 1)
+(global-hl-line-mode t)
 
 ;; Enable syntax highlighting for older Emacsen that have it off
 (global-font-lock-mode t)
