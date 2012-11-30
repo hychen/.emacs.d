@@ -1,5 +1,8 @@
 ;;; rc-misc.el -- Misc Settings
 
+;; Revert buffer from disk always if content is different.
+(global-auto-revert-mode t)
+
 ;; Window Navigation
 ;; Use meta + N to switch between windows instead of
 ;; C-x C-j
