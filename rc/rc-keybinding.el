@@ -77,4 +77,15 @@
 (global-set-key (kbd "M-k") 'qiang-copy-line)
 ;; Smart copy end
 
+;; expand region
+(rc-require 'er/expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
+;; ace jump
+(rc-require 'ace-jump-mode)
+(global-set-key (kbd "C-0") 'ace-jump-mode)
+
+;; iedit
+(global-set-key (kbd "C-;") 'iedit-mode)
+
 (provide 'rc-keybinding)
