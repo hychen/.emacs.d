@@ -19,7 +19,8 @@
 ;; Seed the random-number generator
 (random t)
 
-;; undo-tree mode 
+;; undo-tree mode
+(rc-require 'undo-tree)
 (eval-after-load 'undo-tree
   '(global-undo-tree-mode))
 

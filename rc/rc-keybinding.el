@@ -78,7 +78,7 @@
 ;; Smart copy end
 
 ;; expand region
-(rc-require 'er/expand-region)
+;;(rc-require 'er/expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
 
 ;; ace jump

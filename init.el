@@ -54,6 +54,7 @@
 (require 'rc-lisp)
 (require 'rc-haskell)
 (require 'rc-vala)
+(require 'rc-livescript)
 
 (load custom-file 'noerror)
 ;;; Init.el end
