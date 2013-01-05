@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+# -*- encoding=utf8 -*-
+#
 # File: `(buffer-name)`
 #
 # Copyright (C) 2012  `user-full-name`
