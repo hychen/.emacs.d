@@ -3,7 +3,7 @@
 #
 # File: `(buffer-name)`
 #
-# Copyright (C) 2012  `user-full-name`
+# Copyright (C) 2013  `user-full-name`
 
 # Author(s): `user-full-name` <`user-mail-address`>
 
