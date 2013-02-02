@@ -23,7 +23,7 @@
 ;; 
 
 ;;; Code:
-(add-to-list 'load-path "~/.emacs.d/site-lisp/livescript-mode")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/livescript-mode/livescript-mode")
 (require 'livescript-mode)
 
 (provide 'rc-livescript)
