@@ -49,6 +49,7 @@
 ;; Version Control Modes
 
 ;; Programming Modes
+(require 'rc-sml)
 (require 'rc-cedet)
 (require 'rc-python)
 (require 'rc-lisp)
