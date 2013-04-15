@@ -28,7 +28,36 @@
 ;; org-babel functions for python evaluation
 (require 'ob-python)
 
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((ditaa . t))) ; this line activates ditaa
+(setq org-ditaa-jar-path "/usr/share/ditaa/ditaa.jar")
 (setq org-directory "~/org")
+
+(setq org-log-done 'time)
+
+(setq org-tags-exclude-from-inheritance '("prj")
+      org-stuck-projects '("+prj/-MAYBE-DONE"
+                           ("TODO" "Next") ()))
+
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+
+; preview image inline.
+(add-hook 'org-babel-after-execute-hook 'bh/display-inline-images 'append)
+(setq org-babel-results-keyword "results")
+
+(setq org-confirm-babel-evaluate nil)
+(defun bh/display-inline-images ()
+  (condition-case nil
+      (org-display-inline-images)
+    (error nil)))
+
+;; hotkeys
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+(global-set-key "\C-cc" 'org-capture)
 
 (provide 'rc-org)
 ;;; rc-org.el ends here
