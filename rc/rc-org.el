@@ -28,14 +28,29 @@
 (setq org-directory "~/org")
 
 ;; Task Management
+;; ---------------
 (setq org-agenda-include-diary t)
 (setq org-agenda-diary-file (concat org-directory "/diary.org"))
-(setq org-log-done 'time)
-(setq org-agenda-include-diary t)
+
+;; stuck project
 (setq org-tags-exclude-from-inheritance '("prj")
       org-stuck-projects '("+prj/-MAYBE-DONE"
                            ("TODO" "Next") ()))
 (setq org-default-notes-file (concat org-directory "/notes.org"))
+
+;; progressive logging.
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "STARTED(s!)" "|" "DONE(d!)")
+	(sequence "|" "WAIT(w@/!)")
+	(sequence "|" "CANCELED(c@)/!")))
+
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/org/work/todo.org" "Tasks")
+	 "* TODO %?\n  %i\n  %a")
+	("n" "Notes" entry (file+datetree "~/org/notes.org" "Notes")
+	 "* %u %?")
+        ("j" "Journal" entry (file+datetree "~/org/journal.org")
+	 "* %?\nEntered on %U\n  %i\n")))
 
 ;; Image
 ;; -----
