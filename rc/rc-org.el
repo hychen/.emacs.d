@@ -18,21 +18,13 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-;;; Commentary:
-
-;; 
-
 ;;; Code:
+
+;; Common
 (require 'org)
-
-;; org-babel functions for python evaluation
-(require 'ob-python)
-
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((ditaa . t))) ; this line activates ditaa
-(setq org-ditaa-jar-path "/usr/share/ditaa/ditaa.jar")
 (setq org-directory "~/org")
+
+;; Task Management
 (setq org-agenda-include-diary t)
 (setq org-agenda-diary-file (concat org-directory "/diary.org"))
 (setq org-log-done 'time)
@@ -40,10 +32,18 @@
 (setq org-tags-exclude-from-inheritance '("prj")
       org-stuck-projects '("+prj/-MAYBE-DONE"
                            ("TODO" "Next") ()))
-
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 
-; preview image inline.
+;; Image
+;; -----
+
+;; ASICC diagram 
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((ditaa . t))) ; this line activates ditaa
+(setq org-ditaa-jar-path "/usr/share/ditaa/ditaa.jar")
+
+;; preview image inline.
 (add-hook 'org-babel-after-execute-hook 'bh/display-inline-images 'append)
 (setq org-babel-results-keyword "results")
 
@@ -53,12 +53,8 @@
       (org-display-inline-images)
     (error nil)))
 
-;; hotkeys
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-cc" 'org-capture)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)
-(global-set-key "\C-cc" 'org-capture)
+;; Python : org-babel functions for python evaluation
+(require 'ob-python)
 
 ;; Latex
 ;; -----
@@ -96,6 +92,12 @@
 (setq org-latex-to-pdf-process 
       '("xelatex -interaction nonstopmode %f"
 	"xelatex -interaction nonstopmode %f")) ;; for multiple passes
+
+;; Hotkeys
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
 
 (provide 'rc-org)
 ;;; rc-org.el ends here
