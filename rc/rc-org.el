@@ -22,6 +22,9 @@
 
 ;; Common
 (require 'org)
+;; Python : org-babel functions for python evaluation
+(require 'ob-python)
+
 (setq org-directory "~/org")
 
 ;; Task Management
@@ -53,8 +56,6 @@
       (org-display-inline-images)
     (error nil)))
 
-;; Python : org-babel functions for python evaluation
-(require 'ob-python)
 
 ;; Latex
 ;; -----
@@ -62,6 +63,8 @@
 ;; Refs:
 ;; - http://emacs-fu.blogspot.tw/2011/04/nice-looking-pdfs-with-org-mode-and.html
 
+(eval-after-load 'org-export-latex
+  '(progn
 ;; 'djcb-org-article' for export org documents to the LaTex 'article', using
 ;; XeTeX and some fancy fonts; requires XeTeX (see org-latex-to-pdf-process)
 (add-to-list 'org-export-latex-classes
@@ -92,7 +95,7 @@
 (setq org-latex-to-pdf-process 
       '("xelatex -interaction nonstopmode %f"
 	"xelatex -interaction nonstopmode %f")) ;; for multiple passes
-
+))
 ;; Hotkeys
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
