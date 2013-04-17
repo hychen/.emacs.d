@@ -33,9 +33,10 @@
  '((ditaa . t))) ; this line activates ditaa
 (setq org-ditaa-jar-path "/usr/share/ditaa/ditaa.jar")
 (setq org-directory "~/org")
-
+(setq org-agenda-include-diary t)
+(setq org-agenda-diary-file (concat org-directory "/diary.org"))
 (setq org-log-done 'time)
-
+(setq org-agenda-include-diary t)
 (setq org-tags-exclude-from-inheritance '("prj")
       org-stuck-projects '("+prj/-MAYBE-DONE"
                            ("TODO" "Next") ()))
@@ -58,6 +59,43 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 (global-set-key "\C-cc" 'org-capture)
+
+;; Latex
+;; -----
+
+;; Refs:
+;; - http://emacs-fu.blogspot.tw/2011/04/nice-looking-pdfs-with-org-mode-and.html
+
+;; 'djcb-org-article' for export org documents to the LaTex 'article', using
+;; XeTeX and some fancy fonts; requires XeTeX (see org-latex-to-pdf-process)
+(add-to-list 'org-export-latex-classes
+	     '("djcb-org-article"
+	       "\\documentclass[11pt,a4paper]{article}
+\\usepackage[T1]{fontenc}
+\\usepackage{fontspec}
+\\usepackage{graphicx} 
+\\defaultfontfeatures{Mapping=tex-text}
+\\setromanfont{Gentium}
+\\setromanfont [BoldFont={Gentium Basic Bold},
+                ItalicFont={Gentium Basic Italic}]{Gentium Basic}
+\\setsansfont{Charis SIL}
+\\setmonofont[Scale=0.8]{DejaVu Sans Mono}
+\\usepackage{geometry}
+\\geometry{a4paper, textwidth=6.5in, textheight=10in,
+            marginparsep=7pt, marginparwidth=.6in}
+\\pagestyle{empty}
+\\title{}
+      [NO-DEFAULT-PACKAGES]
+      [NO-PACKAGES]"
+	       ("\\section{%s}" . "\\section*{%s}")
+	       ("\\subsection{%s}" . "\\subsection*{%s}")
+	       ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+	       ("\\paragraph{%s}" . "\\paragraph*{%s}")
+	       ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
+(setq org-latex-to-pdf-process 
+      '("xelatex -interaction nonstopmode %f"
+	"xelatex -interaction nonstopmode %f")) ;; for multiple passes
 
 (provide 'rc-org)
 ;;; rc-org.el ends here
