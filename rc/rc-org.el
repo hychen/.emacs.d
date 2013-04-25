@@ -31,6 +31,7 @@
 ;; ---------------
 (setq org-agenda-include-diary t)
 (setq org-agenda-diary-file (concat org-directory "/diary.org"))
+(setq org-agenda-start-on-weekday  nil)
 
 ;; stuck project
 (setq org-tags-exclude-from-inheritance '("prj")
@@ -40,12 +41,11 @@
 
 ;; progressive logging.
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "STARTED(s!)" "|" "DONE(d!)")
-	(sequence "|" "WAIT(w@/!)")
+      '((sequence "TODO(t)" "STARTED(s!)" "WAIT(w@/!)" "|" "DONE(d!)")
 	(sequence "|" "CANCELED(c@)/!")))
 
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/org/work/work.org" "Tasks")
+      '(("t" "Todo" entry (file+headline "~/org/work/work.org" "InBox")
 	 "* TODO %?\n  %i\n  %a")
 	("n" "Notes" entry (file+datetree "~/org/notes.org" "Notes")
 	 "* %u %?")
@@ -95,6 +95,7 @@
 \\setsansfont{Charis SIL}
 \\setmonofont[Scale=0.8]{DejaVu Sans Mono}
 \\usepackage{geometry}
+\\usepackage{hyperref}
 \\geometry{a4paper, textwidth=6.5in, textheight=10in,
             marginparsep=7pt, marginparwidth=.6in}
 \\pagestyle{empty}
