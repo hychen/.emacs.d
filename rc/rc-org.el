@@ -45,7 +45,7 @@
 	(sequence "|" "CANCELED(c@)/!")))
 
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/org/work/work.org" "InBox")
+      '(("t" "Todo" entry (file+headline "~/org/work/work.org" "In-Box")
 	 "* TODO %?\n  %i\n  %a")
 	("n" "Notes" entry (file+datetree "~/org/notes.org" "Notes")
 	 "* %u %?")
