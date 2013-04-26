@@ -50,7 +50,7 @@
 
 ;; Programming Modes
 (require 'rc-sml)
-(require 'rc-cedet)
+;;(require 'rc-cedet)
 (require 'rc-python)
 (require 'rc-lisp)
 (require 'rc-haskell)
