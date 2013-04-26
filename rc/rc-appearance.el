@@ -1,9 +1,11 @@
 (package-require 'idle-highlight-mode)
+(package-require 'color-theme-solarized)
 
 (require 'idle-highlight-mode)
 
 ;; Load default theme
-;;(load-theme 'tomorrow-night-bright t)
+;;(load-theme 'solarized-light t)
+(load-theme 'solarized-dark t)
 
 ;; Turn off mouse interfae early in startup to avoid momentary display
 ;; (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
