@@ -1,15 +1,13 @@
-;; Tabbar
-;;rc-require 'tabbar)
-;;tabbar-mode t)
-;; Setup tabbar to look pretty 
-;;(rc-require 'tabbar-ruler)
+(package-require 'idle-highlight-mode)
+
+(require 'idle-highlight-mode)
 
 ;; Load default theme
-(load-theme 'tomorrow-night-bright t)
+;;(load-theme 'tomorrow-night-bright t)
 
 ;; Turn off mouse interfae early in startup to avoid momentary display
-(dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
-    (when (fboundp mode) (funcall mode -1)))
+;; (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
+;;    (when (fboundp mode) (funcall mode -1)))
 
 ;; Turn off Startup Message
 (setq inhibit-startup-message t)
@@ -31,7 +29,6 @@
 
 ;; Sets an idle timer that highlights all occurences in the buffer
 ;; of the word under the point.
-(rc-require 'idle-highlight-mode)
 (setq idle-highlight-mode t)
 
 ;; Highlight current line

@@ -1,3 +1,0 @@
-[submodule "site-lisp/livescript-mode/livescript-mode"]
-	path = site-lisp/livescript-mode/livescript-mode
-	url = git://github.com/yhisamatsu/livescript-mode.git

@@ -21,57 +21,55 @@
 ;;; Code:
 
 ;; Common
-(require 'org)
-;; Python : org-babel functions for python evaluation
-(require 'ob-python)
+(eval-after-load "org"
+    '(progn
+	;; Task Management
+	;; ---------------
+	(setq org-directory "~/org")
+	(setq org-agenda-include-diary t)
+	(setq org-agenda-diary-file (concat org-directory "/diary.org"))
+	(setq org-agenda-start-on-weekday  nil)
+	
+	;; stuck project
+	(setq org-tags-exclude-from-inheritance '("prj")
+	      org-stuck-projects '("+prj/-MAYBE-DONE"
+	                           ("TODO" "Next") ()))
+	(setq org-default-notes-file (concat org-directory "/notes.org"))
+	
+	;; progressive logging.
+	(setq org-todo-keywords
+	      '((sequence "TODO(t)" "STARTED(s!)" "WAIT(w@/!)" "|" "DONE(d!)")
+		(sequence "|" "CANCELED(c@)/!")))
+	
+	(setq org-capture-templates
+	      '(("t" "Todo" entry (file+headline "~/org/work/work.org" "In-Box")
+		 "* TODO %?\n  %i\n  %a")
+		("n" "Notes" entry (file+datetree "~/org/notes.org" "Notes")
+		 "* %u %?")
+	        ("j" "Journal" entry (file+datetree "~/org/journal.org")
+		 "* %?\nEntered on %U\n  %i\n")))
+	
+	;; Image
+	;; -----
+	
+	;; ASICC diagram 
+	(org-babel-do-load-languages
+	 'org-babel-load-languages
+	 '((ditaa . t))) ; this line activates ditaa
+	(setq org-ditaa-jar-path "/usr/share/ditaa/ditaa.jar")
+	
+	;; preview image inline.
+	(add-hook 'org-babel-after-execute-hook 'bh/display-inline-images 'append)
+	(setq org-babel-results-keyword "results")
+	
+	(setq org-confirm-babel-evaluate nil)
+	(defun bh/display-inline-images ()
+	  (condition-case nil
+	      (org-display-inline-images)
+	    (error nil)))
 
-(setq org-directory "~/org")
-
-;; Task Management
-;; ---------------
-(setq org-agenda-include-diary t)
-(setq org-agenda-diary-file (concat org-directory "/diary.org"))
-(setq org-agenda-start-on-weekday  nil)
-
-;; stuck project
-(setq org-tags-exclude-from-inheritance '("prj")
-      org-stuck-projects '("+prj/-MAYBE-DONE"
-                           ("TODO" "Next") ()))
-(setq org-default-notes-file (concat org-directory "/notes.org"))
-
-;; progressive logging.
-(setq org-todo-keywords
-      '((sequence "TODO(t)" "STARTED(s!)" "WAIT(w@/!)" "|" "DONE(d!)")
-	(sequence "|" "CANCELED(c@)/!")))
-
-(setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/org/work/work.org" "In-Box")
-	 "* TODO %?\n  %i\n  %a")
-	("n" "Notes" entry (file+datetree "~/org/notes.org" "Notes")
-	 "* %u %?")
-        ("j" "Journal" entry (file+datetree "~/org/journal.org")
-	 "* %?\nEntered on %U\n  %i\n")))
-
-;; Image
-;; -----
-
-;; ASICC diagram 
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((ditaa . t))) ; this line activates ditaa
-(setq org-ditaa-jar-path "/usr/share/ditaa/ditaa.jar")
-
-;; preview image inline.
-(add-hook 'org-babel-after-execute-hook 'bh/display-inline-images 'append)
-(setq org-babel-results-keyword "results")
-
-(setq org-confirm-babel-evaluate nil)
-(defun bh/display-inline-images ()
-  (condition-case nil
-      (org-display-inline-images)
-    (error nil)))
-
-
+   )
+)
 ;; Latex
 ;; -----
 
@@ -112,11 +110,12 @@
       '("xelatex -interaction nonstopmode %f"
 	"xelatex -interaction nonstopmode %f")) ;; for multiple passes
 ))
-;; Hotkeys
+
+;; Gloabal Hotkeys
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)
+(global-set-key "\C-cb" 'org-iswitchb)  
 
 (provide 'rc-org)
 ;;; rc-org.el ends here

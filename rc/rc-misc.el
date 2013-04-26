@@ -1,4 +1,11 @@
 ;;; rc-misc.el -- Misc Settings
+(package-require 'window-number)
+(package-require 'undo-tree)
+(package-require 'ido-ubiquitous)
+
+(require 'undo-tree)
+(require 'ido-ubiquitous)
+(require 'window-number)
 
 ;; Revert buffer from disk always if content is different.
 (global-auto-revert-mode t)
@@ -6,7 +13,6 @@
 ;; Window Navigation
 ;; Use meta + N to switch between windows instead of
 ;; C-x C-j
-(require 'window-number)
 (window-number-meta-mode)
 
 ;; Use text-mode as default
@@ -20,7 +26,6 @@
 (random t)
 
 ;; undo-tree mode
-(rc-require 'undo-tree)
 (eval-after-load 'undo-tree
   '(global-undo-tree-mode))
 
@@ -35,8 +40,6 @@
 (auto-compression-mode t)
 
 ;; ido-mode is like magic pixie dust!
-(rc-require 'ido-ubiquitous)
-
 (ido-mode t)
 (ido-ubiquitous t)
 (ido-everywhere t)
@@ -49,10 +52,6 @@
       ido-handle-duplicate-virtual-buffers 2
       ido-max-prospects 10)
 
-;; Auto-Complete
-(rc-require 'auto-complete)
-(global-auto-complete-mode t)
-
 ;; Use y instead of yes, and n insted of no
 (defalias 'yes-or-no-p 'y-or-n-p)
 
@@ -64,29 +63,6 @@
   '(progn
      (set-face-foreground 'diff-added "green4")
      (set-face-foreground 'diff-removed "red3")))
-
-;; Auto indent when yank-past
-(dolist (command '(yank yank-pop))
-  (eval
-   `(defadvice ,command (after indent-region activate)
-      (and (not current-prefix-arg)
-	   (member major-mode
-		   '(emacs-lisp-mode
-		     lisp-mode
-		     clojure-mode
-		     scheme-mode
-		     haskell-mode
-		     ruby-mode
-		     rspec-mode
-		     python-mode
-		     c-mode
-		     c++-mode
-		     objc-mode
-		     latex-mode
-		     js-mode
-		     plain-tex-mode))
-	   (let ((mark-even-if-inactive transient-mark-mode))
-	     (indent-region (region-beginning) (region-end) nil))))))
 
 ;; Enable display/open image in Emacs
 (auto-image-file-mode)

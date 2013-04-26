@@ -31,31 +31,22 @@
 
 ;; Load features that needs to be loaded early in startup
 (require 'rc-package)
-(require 'rc-appearance)
 
 ;; Generic Modes
+(require 'rc-appearance)
 (require 'rc-keybinding)
-(require 'rc-auto-insert)
-(require 'rc-dired)
-(require 'rc-multi-term)
 (require 'rc-misc)
 
 ;; Documenting Modes
-(require 'rc-yaml)
 (require 'rc-org)
+(require 'rc-yaml)
 (require 'rc-markdown)
-(require 'rc-moinmoin)
 
 ;; Version Control Modes
 
 ;; Programming Modes
-(require 'rc-sml)
-;;(require 'rc-cedet)
-(require 'rc-python)
 (require 'rc-lisp)
 (require 'rc-haskell)
-(require 'rc-vala)
-(require 'rc-livescript)
 
 (load custom-file 'noerror)
 ;;; Init.el end
