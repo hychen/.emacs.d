@@ -8,7 +8,7 @@
 
 ;; enabling fast/direct cursor movement in current view
 ;; ref: http://www.emacswiki.org/emacs/AceJump
-(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+(define-key global-map (kbd "C-3") 'ace-jump-mode)
 
 ;; Use regex searches by default.
 (global-set-key (kbd "C-s") 'isearch-forward-regexp)
