@@ -3,6 +3,12 @@
 ;; Copyright (C) 2012  Chen Hsin-Yi
 
 ;; Author: hychen <ossug.hychen@gmail.com>
+(package-require 'ace-jump-mode)
+(require 'ace-jump-mode)
+
+;; enabling fast/direct cursor movement in current view
+;; ref: http://www.emacswiki.org/emacs/AceJump
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
 ;; Use regex searches by default.
 (global-set-key (kbd "C-s") 'isearch-forward-regexp)
