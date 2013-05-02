@@ -49,5 +49,5 @@
         (indent-according-to-mode)))
 
 (global-set-key [S-return]   'open-next-line)
-(global-unset-key-map (kbd "C-space")
+;;(global-unset-key-map (kbd "C-space")
 (provide 'rc-keybinding)
