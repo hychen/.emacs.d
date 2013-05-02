@@ -38,7 +38,7 @@
 	
 	;; progressive logging.
 	(setq org-todo-keywords
-	      '((sequence "TODO(t)" "STARTED(s!)" "WAIT(w@/!)" "|" "DONE(d!)")
+	      '((sequence "TODO(t)" "STARTED(s!)" "WAIT(w@/!)" "DEFERRED(f!)" "HOLD(h@/!)" "|" "DONE(d!)")
 		(sequence "|" "CANCELED(c@)/!")))
 	
 	(setq org-capture-templates
