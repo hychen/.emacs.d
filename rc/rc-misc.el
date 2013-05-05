@@ -69,4 +69,7 @@
 ;; Enable display/open image in Emacs
 (auto-image-file-mode)
 
+;; http://www.emacswiki.org/emacs/PythonProgrammingInEmacs
+(delete-selection-mode t)
+
 (provide 'rc-misc)
