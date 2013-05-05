@@ -12,4 +12,5 @@
  '(column-number-mode t)
  '(org-agenda-files (quote ("~/org/work/work.org")))
  '(show-paren-mode t)
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(virtualenv-root "/home/hychen/.virtualenv/"))

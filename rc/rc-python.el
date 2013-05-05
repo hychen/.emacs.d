@@ -1,11 +1,13 @@
-
 ;; ref: 
 ;; - https://github.com/gabrielelanaro/emacs-for-python
 ;; - http://www.jesshamrick.com/2012/09/18/emacs-as-a-python-ide/
-
 (eval-after-load 'python
   '(progn
+     (package-require 'virtualenv)
+     (require 'virtualenv)
+     ;;==================================================
      ;; use IPython
+     ;;==================================================
      (setq
       python-shell-interpreter "ipython"
       python-shell-interpreter-args ""
@@ -21,7 +23,6 @@
      ;; Insert operators with surrounding spaces smartly.
      (smart-operator-mode)
      ))
-
 (provide 'rc-python)
 
 
