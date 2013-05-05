@@ -21,11 +21,40 @@
       "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
      ))
 
+
+; patches by balle
+; http://www.datenterrorist.de
+(defun balle-python-shift-left ()
+  (interactive)
+  (let (start end bds)
+    (if (and transient-mark-mode
+	   mark-active)
+	(setq start (region-beginning) end (region-end))
+      (progn
+	(setq bds (bounds-of-thing-at-point 'line))
+	(setq start (car bds) end (cdr bds))))
+  (python-indent-shift-left start end))
+  (setq deactivate-mark nil)
+)
+
+(defun balle-python-shift-right ()
+  (interactive)
+  (let (start end bds)
+    (if (and transient-mark-mode
+	   mark-active)
+	(setq start (region-beginning) end (region-end))
+      (progn
+	(setq bds (bounds-of-thing-at-point 'line))
+	(setq start (car bds) end (cdr bds))))
+  (python-indent-shift-right start end))
+  (setq deactivate-mark nil)
+)
+
 (add-hook 'python-mode-hook
 	  (lambda ()
 	    (define-key python-mode-map (kbd "RET") 'newline-and-indent)
-	    (define-key python-mode-map (kbd "M-<right>") 'python-indent-shift-right)
-	    (define-key python-mode-map (kbd "M-<left>") 'python-indent-shift-left)
+	    (define-key python-mode-map (kbd "M-<right>") 'balle-python-indent-shift-right)
+	    (define-key python-mode-map (kbd "M-<left>") 'balle-python-indent-shift-left)
 	    ;; Insert operators with surrounding spaces smartly.
 	    (smart-operator-mode)
 	    ))
