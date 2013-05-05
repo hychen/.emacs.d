@@ -22,11 +22,13 @@
      ))
 
 (add-hook 'python-mode-hook
-      (lambda ()
-	(define-key python-mode-map (kbd "RET") 'newline-and-indent)
-     ;; Insert operators with surrounding spaces smartly.
-	(smart-operator-mode)
-	))
+	  (lambda ()
+	    (define-key python-mode-map (kbd "RET") 'newline-and-indent)
+	    (define-key python-mode-map (kbd "M-<right>") 'python-indent-shift-right)
+	    (define-key python-mode-map (kbd "M-<left>") 'python-indent-shift-left)
+	    ;; Insert operators with surrounding spaces smartly.
+	    (smart-operator-mode)
+	    ))
 
 (provide 'rc-python)
 
