@@ -19,10 +19,15 @@
       "';'.join(module_completion('''%s'''))\n"
       python-shell-completion-string-code
       "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
-
-     ;; Insert operators with surrounding spaces smartly.
-     (smart-operator-mode)
      ))
+
+(add-hook 'python-mode-hook
+      (lambda ()
+	(define-key python-mode-map (kbd "RET") 'newline-and-indent)
+     ;; Insert operators with surrounding spaces smartly.
+	(smart-operator-mode)
+	))
+
 (provide 'rc-python)
 
 
