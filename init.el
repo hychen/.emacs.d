@@ -33,6 +33,7 @@
 (require 'rc-package)
 
 ;; Generic Modes
+(require 'rc-auto-complete)
 (require 'rc-appearance)
 (require 'rc-keybinding)
 (require 'rc-misc)
