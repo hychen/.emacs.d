@@ -47,6 +47,7 @@
 ;; Programming Modes
 (require 'rc-lisp)
 (require 'rc-haskell)
+(require 'rc-python)
 
 (load custom-file 'noerror)
 ;;; Init.el end
