@@ -2,7 +2,7 @@
 (package-require 'window-number)
 (package-require 'undo-tree)
 (package-require 'ido-ubiquitous)
-(package-require 'smart-operator)
+;;(package-require 'smart-operator)
 
 (require 'smart-operator)
 (require 'undo-tree)

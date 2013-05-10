@@ -1,0 +1,3 @@
+[submodule "lisp-lib/smart-operator"]
+	path = lisp-lib/smart-operator
+	url = git@github.com:hychen/smart-operator.git

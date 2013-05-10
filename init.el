@@ -26,6 +26,7 @@
 (setq custom-file (locate-user-emacs-file "custom.el"))
 
 ;; Load path etc.
+(add-to-list 'load-path (locate-user-emacs-file "lisp-lib/smart-operator"))
 (add-to-list 'load-path (locate-user-emacs-file "rc"))
 (add-to-list 'custom-theme-load-path (locate-user-emacs-file "themes"))
 
