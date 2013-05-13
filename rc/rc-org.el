@@ -230,6 +230,8 @@
 (setq org-log-done (quote time))
 (setq org-log-into-drawer t)
 (setq org-log-state-notes-insert-after-drawers nil)
+;; Agenda log mode items to display (closed and state changes by default)
+(setq org-agenda-log-mode-items (quote (closed state)))
 
 ;; Custom Key Bindings
 (global-set-key "\C-cc" 'org-capture)
