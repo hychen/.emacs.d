@@ -55,7 +55,7 @@
 
 ;; stuck project
 (setq org-tags-exclude-from-inheritance '("project")
-      org-stuck-projects '("+project/-HOLD-CANCELLED"
+      org-stuck-projects '("+project/-HOLD-CANCELLED-DONE"
 			   ("TODO" "NEXT") ()))
 
 ;; Refill
@@ -203,7 +203,9 @@
 			 ((org-agenda-overriding-header "Stuck Projects"))
 			 )
 		  (tags "project"
-			((org-agenda-overriding-header "Projects"))
+			((org-agenda-overriding-header "Projects")
+			 (org-agenda-sorting-strategy
+			  '(todo-state-down effort-up category-keep)))
 			) 
 		  (todo "HOLD"
 			((org-agenda-overriding-header "Postpond Tasks"))
