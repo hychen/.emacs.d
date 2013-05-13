@@ -167,8 +167,7 @@
 		       ((org-agenda-overriding-header "Stuck Projects"))
 		       )
 		(todo "WAITING|HOLD"
-                           ((org-agenda-overriding-header "Waiting and Postponed Tasks")
-                            (org-agenda-skip-function 'bh/skip-stuck-projects)
+                           ((org-agenda-overriding-header "Waiting and Postponed Tasks")           
                             (org-tags-match-list-sublevels nil)
                             (org-agenda-todo-ignore-scheduled 'future)
                             (org-agenda-todo-ignore-deadlines 'future)))
@@ -221,6 +220,16 @@
   "Exclude todo keywords with a done state from refile targets"
   (not (member (nth 2 (org-heading-components)) org-done-keywords)))
 (setq org-refile-target-verify-function 'bh/verify-refile-target)
+
+;; Clocking
+(setq org-drawers (quote ("PROPERTIES" "LOGBOOK")))
+;; Save clock data and state changes and notes in the LOGBOOK drawer
+(setq org-clock-into-drawer t)
+ 
+;; Logging 
+(setq org-log-done (quote time))
+(setq org-log-into-drawer t)
+(setq org-log-state-notes-insert-after-drawers nil)
 
 ;; Custom Key Bindings
 (global-set-key "\C-cc" 'org-capture)
