@@ -37,6 +37,8 @@
 			       "~/org/work.org"
 			       "~/org/work-fo.org"
 			       "~/org/work-st.org"
+			       "~/org/org.org"
+			       "~/org/todo.org"
 			       )))
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
@@ -101,7 +103,52 @@
 ;; Compact the block agenda view
 (setq org-agenda-compact-blocks t)
 
-(setq org-agenda-start-on-weekday  nil)
+(setq org-agenda-start-on-weekday  1)
+
+;; Always hilight the current agenda line
+(add-hook 'org-agenda-mode-hook
+          '(lambda () (hl-line-mode 1))
+          'append)
+
+;; Keep tasks with dates on the global todo lists
+(setq org-agenda-todo-ignore-with-date nil)
+
+;; Keep tasks with deadlines on the global todo lists
+(setq org-agenda-todo-ignore-deadlines nil)
+
+;; Keep tasks with scheduled dates on the global todo lists
+(setq org-agenda-todo-ignore-scheduled nil)
+
+;; Keep tasks with timestamps on the global todo lists
+(setq org-agenda-todo-ignore-timestamp nil)
+
+;; Remove completed deadline tasks from the agenda view
+(setq org-agenda-skip-deadline-if-done t)
+
+;; Remove completed scheduled tasks from the agenda view
+(setq org-agenda-skip-scheduled-if-done t)
+
+;; Remove completed items from search results
+(setq org-agenda-skip-timestamp-if-done t)
+
+(setq org-agenda-include-diary nil)
+(setq org-agenda-insert-diary-extract-time t)
+;; Include agenda archive files when searching for things
+(setq org-agenda-text-search-extra-files (quote (agenda-archives)))
+
+;; Show all future entries for repeating tasks
+(setq org-agenda-repeating-timestamp-show-all t)
+
+(setq org-agenda-span 'day)
+
+;; Show all agenda dates - even if they are empty
+(setq org-agenda-show-all-dates t)
+;; Sorting order for tasks on the agenda
+(setq org-agenda-sorting-strategy
+      (quote ((agenda habit-down time-up user-defined-up priority-down effort-up category-keep)
+              (todo category-up priority-down effort-up)
+              (tags category-up priority-down effort-up)
+              (search category-up))))
 
 ;; Custom agenda command definitions
 (setq org-agenda-custom-commands
