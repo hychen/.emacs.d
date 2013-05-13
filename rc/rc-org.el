@@ -28,8 +28,8 @@
 
 ;; Basic settings
 (setq org-directory "~/org")
-(setq refilepath "~/org/refile.org")
-(setq diarypath "~/org/diary.org")
+(setq refilepath "~/Ubuntu One/org/dayplanner/refile.org")
+(setq diarypath "~/Ubuntu One/org/dayplanner/diary.org")
 
 ;; Task Management
 ;; ---------------

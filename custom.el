@@ -10,13 +10,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
+ '(org-agenda-files (quote ("~/Ubuntu One/org/dayplanner/work.org" "~/Ubuntu One/org/dayplanner/work-fo.org" "~/Ubuntu One/org/dayplanner/work-st.org" "~/Ubuntu One/org/dayplanner/org.org" "~/Ubuntu One/org/dayplanner/todo.org" "~/Ubuntu One/org/dayplanner/refile.org" )))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
- '(org-agenda-files (quote ("~/org/refile.org"
-			       "~/org/work.org"
-			       "~/org/work-fo.org"
-			       "~/org/work-st.org"
-			       "~/org/org.org"
-			       "~/org/todo.org"
-			       ))) 
  '(virtualenv-root "/home/hychen/.virtualenv/"))
