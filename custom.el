@@ -12,4 +12,11 @@
  '(column-number-mode t)
  '(show-paren-mode t)
  '(tool-bar-mode nil)
+ '(org-agenda-files (quote ("~/org/refile.org"
+			       "~/org/work.org"
+			       "~/org/work-fo.org"
+			       "~/org/work-st.org"
+			       "~/org/org.org"
+			       "~/org/todo.org"
+			       ))) 
  '(virtualenv-root "/home/hychen/.virtualenv/"))

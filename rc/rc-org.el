@@ -33,13 +33,6 @@
 
 ;; Task Management
 ;; ---------------
-(setq org-agenda-files (quote ("~/org/refile.org"
-			       "~/org/work.org"
-			       "~/org/work-fo.org"
-			       "~/org/work-st.org"
-			       "~/org/org.org"
-			       "~/org/todo.org"
-			       )))
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
 	      (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE"))))
