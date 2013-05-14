@@ -155,7 +155,7 @@
                 (tags "REFILE"
                       ((org-agenda-overriding-header "Tasks to Refile")
                        (org-tags-match-list-sublevels nil)))
-                (todo "TODO|NEXT"
+                (todo "NEXT"
                            ((org-agenda-overriding-header "Next Tasks")
                             (org-agenda-todo-ignore-scheduled t)
                             (org-agenda-todo-ignore-deadlines t)
