@@ -60,7 +60,7 @@
       (quote (("t" "Todo" entry (file refilepath)
 	       "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
 	      ("r" "Respond" entry (file refilepath)
-	       "* NEXT Respond to %:from on %:subject\nSCHEDULED: %t\n%U\n%a\n" :clock-in t :clock-resume t :immediate-finish t)
+	       "* NEXT Respond to  on \nSCHEDULED: %t\n%U\n%a\n" :clock-in t :clock-resume t)
 	      ("n" "Note" entry (file refilepath)
 	       "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
 	      ("j" "Journal" entry (file+datetree diarypath)
