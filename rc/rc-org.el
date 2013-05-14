@@ -146,7 +146,7 @@
 ;; Custom agenda command definitions
 (setq org-agenda-custom-commands
       (quote (;;-- commands start
-	      ("N" "Notes" tags "note"
+	      ("N" "Notes" tags "NOTE"
               ((org-agenda-overriding-header "Notes")
 	       (org-tags-match-list-sublevels t)))
 	      ;;--
