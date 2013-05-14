@@ -170,7 +170,9 @@
                            ((org-agenda-overriding-header "Waiting and Postponed Tasks")           
                             (org-tags-match-list-sublevels nil)
                             (org-agenda-todo-ignore-scheduled 'future)
-                            (org-agenda-todo-ignore-deadlines 'future)))
+                            (org-agenda-todo-ignore-deadlines 'future)
+			    (org-agenda-sorting-strategy
+			     '(todo-state-down effort-up category-keep))))
 		))	      
 	      ;;--
               ("r" "Tasks to Refile" tags "REFILE"
