@@ -124,7 +124,7 @@
 ;; Remove completed items from search results
 (setq org-agenda-skip-timestamp-if-done t)
 
-(setq org-agenda-include-diary nil)
+(setq org-agenda-include-diary t)
 (setq org-agenda-insert-diary-extract-time t)
 ;; Include agenda archive files when searching for things
 (setq org-agenda-text-search-extra-files (quote (agenda-archives)))

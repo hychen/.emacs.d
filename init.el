@@ -37,6 +37,7 @@
 (require 'rc-auto-complete)
 (require 'rc-appearance)
 (require 'rc-keybinding)
+(require 'rc-diary)
 (require 'rc-misc)
 
 ;; Documenting Modes
