@@ -20,13 +20,9 @@
 
 (eval-after-load 'haskell-mode
   `(progn
-   ;; Indent
-   ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
-   (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
-   ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
    ;; Use Unicode symbols
    (setq haskell-font-lock-symbols t)
      ))
-
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 (provide 'rc-haskell)
 ;; rc-haskell.el ends here
