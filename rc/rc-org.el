@@ -155,6 +155,9 @@
                 (tags "REFILE"
                       ((org-agenda-overriding-header "Tasks to Refile")
                        (org-tags-match-list-sublevels nil)))
+                (tags "@email/-DONE-HOLD-CANCELLED-WAITING"
+                      ((org-agenda-overriding-header "Tasks to Respond")
+                       (org-tags-match-list-sublevels nil)))		
                 (todo "NEXT"
                            ((org-agenda-overriding-header "Next Tasks")
                             (org-agenda-todo-ignore-scheduled t)
@@ -163,9 +166,21 @@
                             (org-tags-match-list-sublevels t)
                             (org-agenda-sorting-strategy
                              '(todo-state-down effort-up category-keep))))		
+		(tags "FOLLOW"
+                           ((org-agenda-overriding-header "Followup Tasks")           
+                            (org-tags-match-list-sublevels nil)
+                            (org-agenda-todo-ignore-scheduled 'future)
+                            (org-agenda-todo-ignore-deadlines 'future)
+			    (org-agenda-sorting-strategy
+			     '(todo-state-down effort-up category-keep))))
 		(stuck ""
 		       ((org-agenda-overriding-header "Stuck Projects"))
 		       )
+		(tags "project/-DONE"
+		      ((org-agenda-overriding-header "Projects")
+		       (org-agenda-sorting-strategy
+			'(todo-state-down effort-up category-keep)))
+		      ) 
 		(todo "WAITING|HOLD"
                            ((org-agenda-overriding-header "Waiting and Postponed Tasks")           
                             (org-tags-match-list-sublevels nil)
