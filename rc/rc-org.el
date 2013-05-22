@@ -35,6 +35,7 @@
 ;; ---------------
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
+              (sequence "TODO(t)" "DELEGATED(e@/!)" "|" "DONE(d)")
 	      (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE"))))
 
 (setq org-todo-keyword-faces
@@ -43,7 +44,8 @@
               ("DONE" :foreground "forest green" :weight bold)
               ("WAITING" :foreground "orange" :weight bold)
               ("HOLD" :foreground "magenta" :weight bold)
-              ("CANCELLED" :foreground "forest green" :weight bold)
+              ("DELEGATED" :foreground "SteelBlue4" :weight bold)
+	      ("CANCELLED" :foreground "forest green" :weight bold)	      
               ("PHONE" :foreground "forest green" :weight bold))))
 
 ;; stuck project
@@ -157,7 +159,10 @@
                        (org-tags-match-list-sublevels nil)))
                 (tags "@email/-DONE-HOLD-CANCELLED-WAITING"
                       ((org-agenda-overriding-header "Tasks to Respond or Notice")
-                       (org-tags-match-list-sublevels nil)))		
+				    (org-agenda-todo-ignore-scheduled t)
+				    (org-agenda-todo-ignore-deadlines t)
+				    (org-agenda-todo-ignore-with-date t)
+			       (org-tags-match-list-sublevels nil)))		
                 (todo "NEXT"
                            ((org-agenda-overriding-header "Next Tasks")
                             (org-agenda-todo-ignore-scheduled t)
@@ -181,7 +186,7 @@
 		       (org-agenda-sorting-strategy
 			'(todo-state-down effort-up category-keep)))
 		      ) 
-		(todo "WAITING|HOLD"
+		(todo "WAITING|HOLD|DELEGATED"
                            ((org-agenda-overriding-header "Waiting and Postponed Tasks")           
                             (org-tags-match-list-sublevels nil)
                             (org-agenda-todo-ignore-scheduled 'future)
