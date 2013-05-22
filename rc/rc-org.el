@@ -156,7 +156,7 @@
                       ((org-agenda-overriding-header "Tasks to Refile")
                        (org-tags-match-list-sublevels nil)))
                 (tags "@email/-DONE-HOLD-CANCELLED-WAITING"
-                      ((org-agenda-overriding-header "Tasks to Respond")
+                      ((org-agenda-overriding-header "Tasks to Respond or Notice")
                        (org-tags-match-list-sublevels nil)))		
                 (todo "NEXT"
                            ((org-agenda-overriding-header "Next Tasks")
