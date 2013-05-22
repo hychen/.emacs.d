@@ -34,8 +34,7 @@
 ;; Task Management
 ;; ---------------
 (setq org-todo-keywords
-      (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
-              (sequence "DELEGATED(e@/!)" "|" "DONE(d)")
+      (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DELEGATED(e@/!)" "DONE(d)")
 	      (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE"))))
 
 (setq org-todo-keyword-faces
