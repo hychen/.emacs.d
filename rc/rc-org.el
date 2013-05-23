@@ -376,7 +376,8 @@
 
 (define-abbrev org-mode-abbrev-table "selisp" "" 'skel-org-block-elisp)
 
-;; selisp - Emacs Lisp source block
+; Overwrite the current window with the agenda
+(setq org-agenda-window-setup 'current-window)
 
 (provide 'rc-org)
 ;;; rc-org.el ends here
