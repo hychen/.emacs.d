@@ -379,5 +379,10 @@
 ; Overwrite the current window with the agenda
 (setq org-agenda-window-setup 'current-window)
 
+(setq org-list-demote-modify-bullet (quote (("+" . "-")
+                                            ("*" . "-")
+                                            ("1." . "-")
+                                            ("1)" . "-"))))
+
 (provide 'rc-org)
 ;;; rc-org.el ends here
