@@ -27,6 +27,7 @@
 
 ;; Load path etc.
 (add-to-list 'load-path (locate-user-emacs-file "lisp-lib/smart-operator"))
+(add-to-list 'load-path (locate-user-emacs-file "lisp-lib/livescript-mode"))
 (add-to-list 'load-path (locate-user-emacs-file "rc"))
 (add-to-list 'custom-theme-load-path (locate-user-emacs-file "themes"))
 
@@ -51,6 +52,7 @@
 (require 'rc-lisp)
 (require 'rc-haskell)
 (require 'rc-python)
+(require 'rc-livescript)
 
 (load custom-file 'noerror)
 ;;; Init.el end

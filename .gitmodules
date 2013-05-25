@@ -1,3 +1,9 @@
 [submodule "lisp-lib/smart-operator"]
 	path = lisp-lib/smart-operator
 	url = git@github.com:hychen/smart-operator.git
+[submodule "list-lib/livescript-mode"]
+	path = list-lib/livescript-mode
+	url = git://github.com/bdowning/livescript-mode.git
+[submodule "lisp-lib/livescript-mode"]
+	path = lisp-lib/livescript-mode
+	url = git://github.com/bdowning/livescript-mode.git
