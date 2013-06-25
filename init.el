@@ -54,5 +54,7 @@
 (require 'rc-python)
 (require 'rc-livescript)
 
+;; start emacs server.
+(server-start)
 (load custom-file 'noerror)
 ;;; Init.el end
