@@ -2,6 +2,12 @@
 (package-require 'window-number)
 (package-require 'undo-tree)
 (package-require 'ido-ubiquitous)
+;;(package-require 'edit-server)
+
+(when (and (daemonp) (locate-library "edit-server"))
+  (require 'edit-server)
+  (edit-server-start))
+
 ;;(package-require 'smart-operator)
 
 (require 'smart-operator)
