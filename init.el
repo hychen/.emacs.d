@@ -45,6 +45,7 @@
 (require 'rc-org)
 (require 'rc-yaml)
 (require 'rc-markdown)
+(require 'rc-moinmoin)
 
 ;; Version Control Modes
 
