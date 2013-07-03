@@ -4,9 +4,9 @@
 (package-require 'ido-ubiquitous)
 ;;(package-require 'edit-server)
 
-(when (and (daemonp) (locate-library "edit-server"))
-  (require 'edit-server)
-  (edit-server-start))
+;;(when (and (daemonp) (locate-library "edit-server"))
+;;  (require 'edit-server)
+;;  (edit-server-start))
 
 ;;(package-require 'smart-operator)
 
