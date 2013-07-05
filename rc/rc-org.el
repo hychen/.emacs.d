@@ -24,6 +24,7 @@
 
 ;; Based on
 ;; ref: http://doc.norang.ca/org-mode.html
+(package-require 'org)
 (require 'org)
 
 ;; Basic settings
