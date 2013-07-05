@@ -78,4 +78,8 @@
 ;; http://www.emacswiki.org/emacs/PythonProgrammingInEmacs
 (delete-selection-mode t)
 
+;; Cua mode
+(setq cua-enable-cua-keys nil)
+(cua-mode t)
+
 (provide 'rc-misc)
