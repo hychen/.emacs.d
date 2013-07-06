@@ -50,6 +50,7 @@
 ;; Version Control Modes
 
 ;; Programming Modes
+(require 'rc-c-cplus)
 (require 'rc-lisp)
 (require 'rc-haskell)
 (require 'rc-python)
