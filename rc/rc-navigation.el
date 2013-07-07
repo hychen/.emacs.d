@@ -1,8 +1,6 @@
 (require-package 'window-number)
-(require-package 'undo-tree)
 (require-package 'ido-ubiquitous)
 
-(require 'undo-tree)
 (require 'ido-ubiquitous)
 (require 'window-number)
 
@@ -10,10 +8,6 @@
 ;; Use meta + N to switch between windows instead of
 ;; C-x C-j
 (window-number-meta-mode)
-
-;; undo-tree mode
-(eval-after-load 'undo-tree
-  '(global-undo-tree-mode))
 
 ;; ido-mode is like magic pixie dust!
 (ido-mode t)
