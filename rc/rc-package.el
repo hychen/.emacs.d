@@ -31,7 +31,7 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defun package-require(p)
+(defun require-package(p)
   (when (not (package-installed-p p))
     (package-install p)))
 

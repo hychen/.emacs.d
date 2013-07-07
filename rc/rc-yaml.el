@@ -16,7 +16,7 @@
 
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
-(package-require 'yaml-mode)
+(require-package 'yaml-mode)
 (require 'yaml-mode)
 
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))

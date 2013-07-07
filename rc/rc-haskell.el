@@ -16,7 +16,7 @@
 
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
-(package-require 'haskell-mode)
+(require-package 'haskell-mode)
 
 (eval-after-load 'haskell-mode
   `(progn

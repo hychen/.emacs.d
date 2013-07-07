@@ -3,8 +3,8 @@
 ;; Copyright (C) 2012  Chen Hsin-Yi
 
 ;; Author: hychen <ossug.hychen@gmail.com>
-(package-require 'ace-jump-mode)
-(package-require 'multiple-cursors)
+(require-package 'ace-jump-mode)
+(require-package 'multiple-cursors)
 (require 'ace-jump-mode)
 (require 'multiple-cursors)
 

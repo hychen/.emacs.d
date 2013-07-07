@@ -1,8 +1,8 @@
 ;;; rc-misc.el -- Misc Settings
-(package-require 'window-number)
-(package-require 'undo-tree)
-(package-require 'ido-ubiquitous)
-;;(package-require 'edit-server)
+(require-package 'window-number)
+(require-package 'undo-tree)
+(require-package 'ido-ubiquitous)
+;;(require-package 'edit-server)
 
 ;;(when (and (daemonp) (locate-library "edit-server"))
 ;;  (require 'edit-server)

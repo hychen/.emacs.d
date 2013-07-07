@@ -23,7 +23,7 @@
 ;; 
 
 ;;; Code:
-(package-require 'moinmoin-mode)
+(require-package 'moinmoin-mode)
 
 (provide 'rc-moinmoin)
 ;;; rc-moinmoin.el ends here

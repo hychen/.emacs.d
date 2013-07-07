@@ -3,14 +3,14 @@
 ;;----------------------------------------------------------------------------
 ;; company
 ;;----------------------------------------------------------------------------
-(package-require 'company)
+(require-package 'company)
 (add-hook 'after-init-hook 'global-company-mode)
 (setq company-require-match nil)
 
 ;;----------------------------------------------------------------------------
 ;; auto-complete
 ;;----------------------------------------------------------------------------
-(package-require 'auto-complete)
+(require-package 'auto-complete)
 (require 'auto-complete-config)
 (global-auto-complete-mode t)
 (setq ac-expand-on-auto-complete nil)
@@ -53,7 +53,7 @@
 	    (define-key python-mode-map "'" 'skeleton-pair-insert-maybe)))
 
 ;; Auto complete operator
-;;(package-require 'smart-operator) ;; use git version.
+;;(require-package 'smart-operator) ;; use git version.
 (require 'smart-operator)
 
 (provide 'rc-auto-complete)

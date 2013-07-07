@@ -1,5 +1,5 @@
-(package-require 'idle-highlight-mode)
-(package-require 'color-theme-solarized)
+(require-package 'idle-highlight-mode)
+(require-package 'color-theme-solarized)
 
 (require 'idle-highlight-mode)
 
