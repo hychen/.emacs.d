@@ -8,9 +8,6 @@
 ;;  (require 'edit-server)
 ;;  (edit-server-start))
 
-;;(package-require 'smart-operator)
-
-(require 'smart-operator)
 (require 'undo-tree)
 (require 'ido-ubiquitous)
 (require 'window-number)

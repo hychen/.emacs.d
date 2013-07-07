@@ -52,4 +52,8 @@
 	  (lambda () 
 	    (define-key python-mode-map "'" 'skeleton-pair-insert-maybe)))
 
+;; Auto complete operator
+;;(package-require 'smart-operator) ;; use git version.
+(require 'smart-operator)
+
 (provide 'rc-auto-complete)
