@@ -1,6 +1,7 @@
 ;; ref: 
 ;; - https://github.com/gabrielelanaro/emacs-for-python
 ;; - http://www.jesshamrick.com/2012/09/18/emacs-as-a-python-ide/
+(require-package 'pymacs)
 (eval-after-load 'python
   '(progn
      (require-package 'virtualenv)
