@@ -35,11 +35,12 @@
 (require 'rc-package)
 
 ;; Generic Modes
-(require 'rc-auto-complete)
 (require 'rc-appearance)
+(require 'rc-prefer)
+(require 'rc-auto-complete)
 (require 'rc-keybinding)
 (require 'rc-diary)
-(require 'rc-misc)
+(require 'rc-navigation)
 
 ;; Documenting Modes
 (require 'rc-org)
