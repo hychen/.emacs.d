@@ -28,7 +28,7 @@
 (require 'org)
 
 ;; Basic settings
-(setq org-directory "~/org")
+(setq org-directory "~/Ubuntu One/org/dayplanner")
 (setq refilepath "~/Ubuntu One/org/dayplanner/refile.org")
 (setq diarypath "~/Ubuntu One/org/dayplanner/diary.org")
 
@@ -384,6 +384,16 @@
                                             ("*" . "-")
                                             ("1." . "-")
                                             ("1)" . "-"))))
+
+;; Mobile Org
+;;-----------------------------------------------------------
+;; Set to the name of the file where new notes will be stored
+(setq org-mobile-inbox-for-pull "~/Ubuntu One/org/dayplanner/flagged.org")
+;; Set to <your Dropbox root directory>/MobileOrg.
+(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+
+;; Enable encryption
+(setq org-mobile-use-encryption t)
 
 (provide 'rc-org)
 ;;; rc-org.el ends here

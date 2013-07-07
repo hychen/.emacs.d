@@ -23,3 +23,5 @@ ede-projects.el
 srecode-map.el
 semanticdb/
 backups/
+private.el
+.org-id-locations

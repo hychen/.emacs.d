@@ -24,6 +24,8 @@
 
 ;; Set init file for custom settings
 (setq custom-file (locate-user-emacs-file "custom.el"))
+;; Set init file for prviate custom settings.
+(defvar private-file (locate-user-emacs-file "private.el"))
 
 ;; Load path etc.
 (add-to-list 'load-path (locate-user-emacs-file "lisp-lib/smart-operator"))
@@ -59,5 +61,6 @@
 
 ;; start emacs server.
 (server-start)
+(load private-file 'noerror)
 (load custom-file 'noerror)
 ;;; Init.el end
