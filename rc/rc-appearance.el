@@ -45,4 +45,16 @@
 ;; Making Buffer Names Unique
 (setq uniquify-buffer-name-style 'forward)
 
+;; Colorfull diff 
+(eval-after-load 'diff-mode
+  '(progn
+     (set-face-foreground 'diff-added "green4")
+     (set-face-foreground 'diff-removed "red3")))
+
+;; Enable display/open image in Emacs
+(auto-image-file-mode)
+
+;; Display empty lines
+(set-default 'indicate-empty-lines t)
+
 (provide 'rc-appearance)

@@ -60,18 +60,6 @@
 ;; Use y instead of yes, and n insted of no
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-;; Display empty lines
-(set-default 'indicate-empty-lines t)
-
-;; Colorfull diff 
-(eval-after-load 'diff-mode
-  '(progn
-     (set-face-foreground 'diff-added "green4")
-     (set-face-foreground 'diff-removed "red3")))
-
-;; Enable display/open image in Emacs
-(auto-image-file-mode)
-
 ;; http://www.emacswiki.org/emacs/PythonProgrammingInEmacs
 (delete-selection-mode t)
 
