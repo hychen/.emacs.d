@@ -41,6 +41,7 @@
 (require 'rc-prefer)
 (require 'rc-auto-complete)
 (require 'rc-keybinding)
+(require 'rc-compose)
 (require 'rc-diary)
 (require 'rc-navigation)
 
