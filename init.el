@@ -44,6 +44,7 @@
 (require 'rc-compose)
 (require 'rc-diary)
 (require 'rc-navigation)
+(require 'rc-filemgr)
 
 ;; Documenting Modes
 (require 'rc-org)
