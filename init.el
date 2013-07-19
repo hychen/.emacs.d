@@ -66,3 +66,4 @@
 (load private-file 'noerror)
 (load custom-file 'noerror)
 ;;; Init.el end
+(put 'downcase-region 'disabled nil)
