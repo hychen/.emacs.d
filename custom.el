@@ -13,7 +13,9 @@
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(font-use-system-font t)
- '(org-agenda-files (quote ("~/Ubuntu One/org/dayplanner/work.org" "~/Ubuntu One/org/dayplanner/work-fo.org" "~/Ubuntu One/org/dayplanner/work-st.org" "~/Ubuntu One/org/dayplanner/personal.org" "~/Ubuntu One/org/dayplanner/refile.org")))
+ '(org-agenda-files (quote ("~/Ubuntu One/org/notes/course" 
+                            "~/Ubuntu One/org/notes/social"
+                            "~/Ubuntu One/org/dayplanner/")))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(virtualenv-root "/home/hychen/.virtualenv/"))
