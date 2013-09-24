@@ -15,6 +15,8 @@
  '(font-use-system-font t)
  '(org-agenda-files (quote ("~/Ubuntu One/org/notes/course" 
                             "~/Ubuntu One/org/notes/social"
+                            "~/Ubuntu One/org/notes/portfolio"
+                            "~/Ubuntu One/org/notes/shopping"
                             "~/Ubuntu One/org/dayplanner/")))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
