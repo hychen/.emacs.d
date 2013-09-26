@@ -171,11 +171,9 @@
                             (org-tags-match-list-sublevels t)
                             (org-agenda-sorting-strategy
                              '(todo-state-down effort-up category-keep))))		
-		(tags "FOLLOW"
-                           ((org-agenda-overriding-header "Followup Tasks")           
-                            (org-tags-match-list-sublevels nil)
-                            (org-agenda-todo-ignore-scheduled 'future)
-                            (org-agenda-todo-ignore-deadlines 'future)
+		(todo "DELEGATED"
+                           ((org-agenda-overriding-header "Delegated Tasks")           
+                            (org-tags-match-list-sublevels t)
 			    (org-agenda-sorting-strategy
 			     '(todo-state-down effort-up category-keep))))
 		(stuck ""
