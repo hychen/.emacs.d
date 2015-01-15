@@ -1,15 +1,12 @@
 (require-package 'idle-highlight-mode)
-(require-package 'color-theme-solarized)
 
 (require 'idle-highlight-mode)
 
 ;; Load default theme
-(load-theme 'solarized-light t)
-;;(load-theme 'solarized-dark t)
 
 ;; Turn off mouse interfae early in startup to avoid momentary display
-;; (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
-;;    (when (fboundp mode) (funcall mode -1)))
+(dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
+    (when (fboundp mode) (funcall mode -1)))
 
 ;; Turn off Startup Message
 (setq inhibit-startup-message t)

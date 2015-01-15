@@ -20,7 +20,6 @@
 ;; Personal Infomation
 (setq user-full-name "Hsin-Yi Chen (hychen)")
 (setq user-mail-address "ossug.hychen@gmail.com")
-(setq debian-changelog-mailing-address "hychen@canonical.com")
 
 ;; Set init file for custom settings
 (setq custom-file (locate-user-emacs-file "custom.el"))
@@ -28,8 +27,6 @@
 (defvar private-file (locate-user-emacs-file "private.el"))
 
 ;; Load path etc.
-(add-to-list 'load-path (locate-user-emacs-file "lisp-lib/smart-operator"))
-(add-to-list 'load-path (locate-user-emacs-file "lisp-lib/livescript-mode"))
 (add-to-list 'load-path (locate-user-emacs-file "rc"))
 (add-to-list 'custom-theme-load-path (locate-user-emacs-file "themes"))
 
@@ -39,31 +36,15 @@
 ;; Generic Modes
 (require 'rc-appearance)
 (require 'rc-prefer)
-(require 'rc-auto-complete)
-(require 'rc-keybinding)
-(require 'rc-compose)
-(require 'rc-diary)
 (require 'rc-navigation)
-(require 'rc-filemgr)
 
 ;; Documenting Modes
-(require 'rc-org)
-(require 'rc-yaml)
-(require 'rc-markdown)
-(require 'rc-moinmoin)
 
 ;; Version Control Modes
 
 ;; Programming Modes
-(require 'rc-c-cplus)
-(require 'rc-lisp)
-(require 'rc-haskell)
-(require 'rc-python)
-(require 'rc-livescript)
 
 ;; start emacs server.
-(server-start)
 (load private-file 'noerror)
 (load custom-file 'noerror)
 ;;; Init.el end
-(put 'downcase-region 'disabled nil)
