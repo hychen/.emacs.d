@@ -39,6 +39,8 @@
 (require 'rc-navigation)
 
 ;; Documenting Modes
+(require 'rc-markdown)
+(require 'rc-org)
 
 ;; Version Control Modes
 
