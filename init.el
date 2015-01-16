@@ -37,6 +37,7 @@
 (require 'rc-appearance)
 (require 'rc-prefer)
 (require 'rc-navigation)
+(require 'rc-smex)
 
 ;; Documenting Modes
 (require 'rc-markdown)
