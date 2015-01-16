@@ -37,7 +37,7 @@
 (require 'rc-appearance)
 (require 'rc-prefer)
 (require 'rc-navigation)
-(require 'rc-smex)
+(require 'rc-ido)
 (require 'rc-ibuffer)
 
 ;; Documenting Modes

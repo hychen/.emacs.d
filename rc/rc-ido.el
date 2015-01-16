@@ -1,4 +1,4 @@
-;;; rc-smex.el - Smex is IDO style completion for M-x.
+;;; rc-ido.el - IDO
 
 ;; Copyright (C) 2014 Chen Hsin-Yi (陳信屹)
 
@@ -24,12 +24,25 @@
 
 ;;; Code:
 
-(require-package 'smex)
-(smex-initialize)
- 
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-(global-set-key (kbd "C-c M-x") 'smex-update)
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+;; ido-mode is like magic pixie dust!
+(ido-mode 1)
+(ido-everywhere 1)
+(ido-ubiquitous-mode 1)
+(setq ido-enable-flex-matching t
+      ido-enable-dot-prefix t
+      ido-create-new-buffer 'always
+      ido-use-filename-at-point 'guess
+      ido-use-virtual-buffers 'auto)
 
-(provide 'rc-smex)
+(add-to-list 'ido-ubiquitous-command-overrides
+             '(disable exact "todo-add-category"))
+
+(require 'smex nil t)
+(eval-after-load 'smex
+  '(progn
+     (smex-initialize)
+     (global-set-key [remap execute-extended-command] 'smex)
+     (global-set-key (kbd "M-X") 'smex-major-mode-commands)
+     (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)))
+
+(provide 'rc-ido)
