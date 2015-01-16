@@ -25,3 +25,4 @@ semanticdb/
 backups/
 private.el
 .org-id-locations
+smex-items
