@@ -1,6 +1,9 @@
-(require-package 'window-number)
-
-(require 'window-number)
+;;----------------------------------------------------------------------------
+;; Cursor movement
+;;----------------------------------------------------------------------------
+(require-package 'ace-jump-mode)
+(require 'ace-jump-mode nil t)
+(global-set-key (kbd "C-0") 'ace-jump-mode)
 
 ;;----------------------------------------------------------------------------
 ;; Window Navigation
@@ -8,6 +11,8 @@
 ;; ref: 
 ;; - https://github.com/redguardtoo/emacs.d/blob/master/init-windows.el
 ;;----------------------------------------------------------------------------
+(require-package 'window-number)
+(require 'window-number)
 
 ;; Use meta + N to switch between windows instead of
 ;; C-x C-j
