@@ -51,11 +51,6 @@ overview of the most commonly used shortcuts to get you through this pain:
 
 * `C-g    ` Quit out of whatever mess you've gotten yourself into
 * `M-x    ` Run a command by name
-* `C-.    ` Autocomplete
-* `C-_    ` Undo
-* `M-_    ` Redo
-* `C-x u  ` Show the undo-tree
-* `C-x m  ` Open magit. It's a magical git interface for emacs
 
 ### Navigation
 
@@ -66,6 +61,8 @@ overview of the most commonly used shortcuts to get you through this pain:
 * `C-x C-i` Go to symbol
 * `C-s    ` Search forward. Press `C-s` again to go further.
 * `C-r    ` Search backward. Press `C-r` again to go further.
+* `C-x C-b` Switch buffers interactively (ibuffer)
+* `C-x b`   Switching buffers interactively (ido)
 
 ## Window management
 
