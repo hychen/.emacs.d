@@ -38,6 +38,7 @@
 (require 'rc-prefer)
 (require 'rc-navigation)
 (require 'rc-smex)
+(require 'rc-ibuffer)
 
 ;; Documenting Modes
 (require 'rc-markdown)
