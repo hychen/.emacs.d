@@ -1,6 +1,9 @@
 ;; Revert buffer from disk always if content is different.
 (global-auto-revert-mode t)
 
+;; Don't inserts tabs in place of multiple spaces when it formats a region. 
+(setq-default indent-tabs-mode nil)
+
 ;; Saving or writing a file silently puts a newline at the end if there
 ;; isn't already one there.
 (setq require-final-newline t)
