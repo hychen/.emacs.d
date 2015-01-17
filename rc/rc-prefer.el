@@ -1,6 +1,10 @@
 ;; Revert buffer from disk always if content is different.
 (global-auto-revert-mode t)
 
+;; Saving or writing a file silently puts a newline at the end if there
+;; isn't already one there.
+(setq require-final-newline t)
+
 ;; Use text-mode as default
 (setq default-major-mode 'text-mode)
 
