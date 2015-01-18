@@ -31,6 +31,7 @@
 ;; Sets an idle timer that highlights all occurences in the buffer
 ;; of the word under the point.
 (setq idle-highlight-mode t)
+(idle-highlight-mode)
 
 ;; Highlight current line
 ;(global-hl-line-mode t)
@@ -43,6 +44,11 @@
 
 ;; Making Buffer Names Unique
 (setq uniquify-buffer-name-style 'forward)
+
+;; automatically resize window by golden ration.
+(require-package 'golden-ratio)
+(require 'golden-ratio)
+(golden-ratio-mode t)
 
 ;; Colorfull diff 
 (eval-after-load 'diff-mode
