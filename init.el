@@ -38,7 +38,6 @@
 (require 'rc-prefer)
 (require 'rc-navigation)
 (require 'rc-ido)
-(require 'rc-ibuffer)
 
 ;; Documenting Modes
 (require 'rc-markdown)
