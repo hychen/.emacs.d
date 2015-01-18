@@ -62,4 +62,12 @@
 ;; Display empty lines
 (set-default 'indicate-empty-lines t)
 
+;; Mode line setting
+(require-package 'smart-mode-line)
+(require 'smart-mode-line)
+(setq sml/no-confirm-load-theme t)
+(sml/setup)
+(sml/apply-theme 'dark)
+
+
 (provide 'rc-appearance)
