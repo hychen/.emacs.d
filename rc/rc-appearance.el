@@ -1,6 +1,8 @@
 (require-package 'idle-highlight-mode)
+(require-package 'sr-speedbar)
 
 (require 'idle-highlight-mode)
+(require 'sr-speedbar)
 
 ;; Load default theme
 
