@@ -47,6 +47,7 @@
 ;; Version Control Modes
 
 ;; Programming Modes
+(require 'rc-js-mode)
 (require 'rc-web-mode)
 
 ;; start emacs server.
