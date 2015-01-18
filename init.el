@@ -47,6 +47,7 @@
 ;; Version Control Modes
 
 ;; Programming Modes
+(require 'rc-web-mode)
 
 ;; start emacs server.
 (load private-file 'noerror)
