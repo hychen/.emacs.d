@@ -37,6 +37,7 @@
 (require 'rc-appearance)
 (require 'rc-prefer)
 (require 'rc-navigation)
+(require 'rc-selection)
 (require 'rc-ido)
 
 ;; Documenting Modes
