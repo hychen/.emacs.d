@@ -77,6 +77,7 @@
 ;; - Allow to create a new buffer by pressing RET, under the header
 ;;   `Create Buffer`.
 (global-set-key (kbd "C-x b") 'helm-mini)
+(global-set-key (kbd "C-x C-b") 'helm-mini)
 
 ;; More power find files.
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
