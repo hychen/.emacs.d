@@ -1,7 +1,5 @@
 (require-package 'undo-tree)
 
-(require 'undo-tree)
-
 ;; Undo Tree
 (eval-after-load 'undo-tree
   '(global-undo-tree-mode))
