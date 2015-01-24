@@ -47,6 +47,7 @@
 (require 'rc-org)
 
 ;; Version Control Modes
+(require 'rc-git)
 
 ;; Programming Modes
 (require 'rc-js-mode)
