@@ -76,6 +76,9 @@ overview of the most commonly used shortcuts to get you through this pain:
 - `C-c <-` Switch to left window
 - `Alt N`  Switch to N window
 
+## Notes management
+- `F12` Switch to the notes directory (default: `~/Dropbox/Org/Notes`)
+
 ## Help
 
 - `F1 t` Basic tutorial
