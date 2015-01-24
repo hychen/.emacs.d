@@ -38,6 +38,7 @@
 (require 'rc-prefer)
 (require 'rc-navigation)
 (require 'rc-selection)
+(require 'rc-editing)
 (require 'rc-searching)
 (require 'rc-ido)
 
