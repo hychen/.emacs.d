@@ -1,3 +1,6 @@
+;; Since I end up using org-mode most of the time, set the default mode accordingly.
+(setq initial-major-mode 'org-mode)
+
 ;; Revert buffer from disk always if content is different.
 (global-auto-revert-mode t)
 
