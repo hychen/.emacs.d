@@ -1,10 +1,15 @@
 (require-package 'undo-tree)
+(require-package 'autopair)
 
 (require 'undo-tree)
+(require 'autopair)
 
 ;; Undo Tree
 (eval-after-load 'undo-tree
   '(global-undo-tree-mode))
+         
+;; This makes sure that brace structures (), [], {}, etc. are closed as soon as the opening character is typed. 
+(autopair-global-mode)
 
 ;; ------------------------
 ;; Moving lines or regions
