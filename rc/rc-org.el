@@ -27,5 +27,24 @@
 (require-package 'org)
 (require 'org)
 
+;; Switching Notes directory.
+(defun goto-notes ()
+  "Switch to my work dir."
+   (interactive)
+   (find-file "~/Dropbox/Org/Notes")
+   )
+
+;; Helper for inserting note header.
+(defsubst org-mode-insert-note-header ()
+  "Insert \"#+TITLE: ...\" at the beginning of org file."
+  (insert "#+TITLE: " (file-name-nondirectory (file-name-sans-extension (buffer-file-name))) "\n") ;; filename only, without dir or extension
+  (insert "#+AUTHOR: " (user-full-name) "\n")
+  (insert "#+OPTIONS: H:2 num:t toc:nil\n")
+  (insert "#+OPTIONS: ^:nil\n")
+  (insert "#+OPTIONS: <:nil todo:nil *:t ^:{} @:t ::t |:t TeX:t\n")
+  (insert "#how to change image size: #+attr_html: width=\"40%\"\n"))
+
+(global-set-key (kbd "<f12>") 'goto-notes)
+
 (provide 'rc-org)
 ;;; rc-org.el ends here
