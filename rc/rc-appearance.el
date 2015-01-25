@@ -1,10 +1,12 @@
 (require-package 'idle-highlight-mode)
 (require-package 'sr-speedbar)
+(require-package 'solarized-theme)
 
 (require 'idle-highlight-mode)
 (require 'sr-speedbar)
 
 ;; Load default theme
+(load-theme 'solarized-light t)
 
 ;; Turn off mouse interfae early in startup to avoid momentary display
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
