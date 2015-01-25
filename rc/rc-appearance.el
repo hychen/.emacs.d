@@ -48,7 +48,7 @@
 ;; automatically resize window by golden ration.
 (require-package 'golden-ratio)
 (require 'golden-ratio)
-(golden-ratio-mode t)
+;;(golden-ratio-mode t)
 
 ;; Colorfull diff 
 (eval-after-load 'diff-mode
