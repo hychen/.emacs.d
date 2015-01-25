@@ -4,7 +4,7 @@
 
 To grab all the dependencies:
 
-    git clone --recursive git://github.com/magnars/.emacs.d.git
+    git clone --recursive git://github.com/hychen/.emacs.d.git
 
 The first time you start emacs, it will install some additional packages
 that are best handled by the package manager.
@@ -78,6 +78,9 @@ overview of the most commonly used shortcuts to get you through this pain:
 
 ## Notes management
 - `F12` Switch to the notes directory (default: `~/Dropbox/Org/Notes`)
+
+## Verson Control
+- `C-x g` - Magit
 
 ## Help
 
