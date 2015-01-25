@@ -8,6 +8,9 @@
 ;; Don't inserts tabs in place of multiple spaces when it formats a region. 
 (setq-default indent-tabs-mode nil)
 
+;; ignore the beep
+(setq ring-bell-function 'ignore)
+
 ;; Saving or writing a file silently puts a newline at the end if there
 ;; isn't already one there.
 (setq require-final-newline t)
