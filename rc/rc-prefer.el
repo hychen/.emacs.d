@@ -2,6 +2,13 @@
 (setq initial-scratch-message nil)
 (setq initial-major-mode 'org-mode)
 
+;; Don't use tab to indent.
+(setq-default indent-tabs-mode nil)
+
+(setq tab-width 4) 
+(defvaralias 'c-basic-offset 'tab-width)
+(defvaralias 'cperl-indent-level 'tab-width)
+
 ;; Revert buffer from disk always if content is different.
 (global-auto-revert-mode t)
 
