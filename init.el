@@ -41,6 +41,7 @@
 (require 'rc-editing)
 (require 'rc-searching)
 (require 'rc-ido)
+(require 'rc-autoinsert)
 
 ;; Documenting Modes
 (require 'rc-markdown)
