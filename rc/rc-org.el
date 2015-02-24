@@ -35,6 +35,7 @@
 ;; don't ask before evaluating ditaa blocks
 (defun my-org-confirm-babel-evaluate (lang body)
   (not (string= lang "ditaa")))
+(setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
 
 ;; Switching Notes directory.
 (defun goto-notes ()
