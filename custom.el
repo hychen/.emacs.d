@@ -14,4 +14,8 @@
  '(coffee-tab-width 2)
  '(custom-safe-themes
    (quote
-    ("6a37be365d1d95fad2f4d185e51928c789ef7a4ccf17e7ca13ad63a8bf5b922f" "756597b162f1be60a12dbd52bab71d40d6a2845a3e3c2584c6573ee9c332a66e" default))))
+    ("6a37be365d1d95fad2f4d185e51928c789ef7a4ccf17e7ca13ad63a8bf5b922f" "756597b162f1be60a12dbd52bab71d40d6a2845a3e3c2584c6573ee9c332a66e" default)))
+ '(magit-use-overlays nil)
+ '(org-ditaa-eps-jar-path
+   "/usr/local/Cellar/emacs/24.4/share/emacs/24.4/lisp/contrib/scripts/DitaaEps.jar")
+ '(org-ditaa-jar-path "/usr/local/Cellar/ditaa/0.9/libexec/ditaa0_9.jar"))

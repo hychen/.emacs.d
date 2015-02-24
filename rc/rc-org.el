@@ -27,6 +27,15 @@
 (require-package 'org)
 (require 'org)
 
+;; Babel
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((ditaa . t))) ; this line activates ditaa
+
+;; don't ask before evaluating ditaa blocks
+(defun my-org-confirm-babel-evaluate (lang body)
+  (not (string= lang "ditaa")))
+
 ;; Switching Notes directory.
 (defun goto-notes ()
   "Switch to my work dir."
