@@ -30,11 +30,14 @@
 ;; Babel
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((ditaa . t))) ; this line activates ditaa
+ '((ditaa . t)
+   (js . t)
+   (dot . t)
+   )) ; this line activates ditaa
 
 ;; don't ask before evaluating ditaa blocks
 (defun my-org-confirm-babel-evaluate (lang body)
-  (not (string= lang "ditaa")))
+  (not (or (string= lang "ditaa") (string= lang "dot"))))
 (setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
 
 ;; Switching Notes directory.
